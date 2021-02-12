@@ -6,33 +6,35 @@ that adhere to the global design specification.
 This **Colors** repository contains the shared ProviderTrust and product-specific colors.
 
 ## Demo
-Navigate to the demo directory and run `yarn serve` to get a demo
+Navigate to the demo directory and run `yarn serve`
 
 ## How to Use
-
 ### Copy into your Project
-Until we figure out how to version and publish this, copy `pds` into your `src` directory
+Until we figure out how to version and publish this, copy `src/pds` into your project `src/pds`
 
-## Method 1: As SASS Variables
+### Import into Vuetify variables.scss
 SASS variables can be used in your project by importing them into your variables.scss 
 file as follows:
 ```
+// styles/variables.scss
 @import "@/pds/styles/pds-variables.scss";
 ```
 
-Usage
+At this point, you can use it in your SCSS section like so
 ```
-.class
-    color: $color-pt-royal
+<style lang="scss">
+* {
+  background-color:$color-pt-royal;
+}
 ```
 
-## Method 2: Import into Vuetify Theme
+### Import into Vuetify Theme
 
-Add the following to your vuetify.js file to make the pds color variables available 
-via the Vuetify theme. Then they can be used just like `primary`, `secondary`, etc...
+After importing into variables.scss, you could also add the following to your vuetify.js file to make the pds color variables available via the Vuetify theme.
 
 Example:
 ```
+// vuetify.js
 import pdsVars from "@/pds/styles/pds-js-variables.scss";
 ...
 
@@ -42,13 +44,6 @@ export default new Vuetify({
   theme: {
     themes: {
       light: {
-        primary: "#0A449F",
-        secondary: "#dcdcdc",
-        accent: "#82B1FF",
-        error: "#FE285B",
-        info: "#2196F3",
-        success: "#24BF8E",
-        warning: "#FFC107",
         //Custom variables from ProviderTrust Design System
         ...pdsVars
       }
@@ -63,10 +58,9 @@ Usage:
 <v-input color="colorPtRoyal">
 ```
 
-### Method 3: Using as Javascript Variable
+### Using as Javascript Variable
 
-To use javascript variables in the `<script>` tag of an individual component, you can
-either import them into a pdsVars object in your vue component.
+To use as javascript variables tag of an individual component, you can either import them as a javascript object in your vue component:
 ```
 ...
 import pdsVars from "@/pds/styles/pds-js-variables.scss";
@@ -81,7 +75,7 @@ data() {
 }
 </script>
 ```
-...or if you had already imported them into the Vuetify theme, access them via the $vuetify object:
+...or if you had already imported them into the Vuetify theme, access them via `$vuetify.theme`:
 ```
 <script>
 data() {
