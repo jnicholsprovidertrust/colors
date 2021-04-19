@@ -149,6 +149,12 @@ export default {
           sassVariable: "$color-vp-green"
         },
         {
+          name: "VP Dark Green",
+          hex: styles.colorVpDarkGreen,
+          jsVariable: "colorVpDarkGreen",
+          sassVariable: "$color-vp-dark-green"
+        },
+        {
           name: "VP Green 50",
           hex: styles.colorVpGreen50,
           jsVariable: "colorVpGreen50",
