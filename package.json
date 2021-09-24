@@ -1,0 +1,33 @@
+{
+  "name": "@providertrust/pt-design-system-colors",
+  "version": "1.0.0",
+  "description": "Color variables to be used by PT's front end apps",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/providertrust/pt-design-system-colors.git"
+  },
+  "keywords": [
+    "providertrust",
+    "design",
+    "system",
+    "colors",
+    "front end",
+    "js",
+    "javascript",
+    "html",
+    "vue"
+  ],
+  "author": "Bailin Gao",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/providertrust/pt-design-system-colors/issues"
+  },
+  "homepage": "https://github.com/providertrust/pt-design-system-colors#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/providertrust"
+  }
+}
