@@ -6,18 +6,26 @@ that adhere to the global design specification.
 This **Colors** repository contains the shared ProviderTrust and product-specific colors.
 
 ## Demo
-Navigate to the demo directory and run `yarn serve`
+Navigate to the `demo` directory and run `npm run serve`
+
+## Setup
+### Custom `.npmrc` file
+Make sure your project's `.npmrc` file has content like the following
+```
+registry=https://npm.pkg.github.com/@providertrust
+registry=https://registry.npmjs.org
+```
+###
+### Install the package
+`npm install @providertrust/colors`
 
 ## How to Use
-### Copy into your Project
-Until we figure out how to version and publish this, copy `src/pds` into your project `src/pds`
-
 ### Import into Vuetify variables.scss
 SASS variables can be used in your project by importing them into your variables.scss 
 file as follows:
 ```
 // styles/variables.scss
-@import "@/pds/styles/pds-variables.scss";
+@import '@providertrust/colors/variables.scss';
 ```
 
 At this point, you can use it in your SCSS section like so
@@ -28,14 +36,14 @@ At this point, you can use it in your SCSS section like so
 }
 ```
 
-### Import into Vuetify Theme
+### Import into Vuetify Themes
 
-After importing into variables.scss, you could also add the following to your vuetify.js file to make the pds color variables available via the Vuetify theme.
+After importing into `variables.scss`, you could also add the following to your vuetify.js file to make the color variables available via the Vuetify theme.
 
 Example:
 ```
 // vuetify.js
-import pdsVars from "@/pds/styles/pds-js-variables.scss";
+import colors from '@providertrust/colors/js-variables.scss'
 ...
 
 Vue.use(Vuetify);
@@ -45,7 +53,7 @@ export default new Vuetify({
     themes: {
       light: {
         //Custom variables from ProviderTrust Design System
-        ...pdsVars
+        ...colors
       }
     }
   },
@@ -63,19 +71,19 @@ Usage:
 To use as javascript variables tag of an individual component, you can either import them as a javascript object in your vue component:
 ```
 ...
-import pdsVars from "@/pds/styles/pds-js-variables.scss";
+import colors from '@providertrust/colors/js-variables.scss'
 ...
 <script>
 data() {
   return {
     myData: {
-      color: pdsVars.colorPtRoyal,
+      color: colors.colorPtRoyal,
     }
   }
 }
 </script>
 ```
-...or if you had already imported them into the Vuetify theme, access them via `$vuetify.theme`:
+...or if you had already [imported them into the Vuetify themes](#import-into-vuetify-themes), access them via `$vuetify.theme`:
 ```
 <script>
 data() {
@@ -90,3 +98,8 @@ data() {
 
 ## How to Contribute
 Let's talk on the #design-dev-guild slack channel
+
+## How to Publish New Release
+Follow the setup directions on https://javascript.plainenglish.io/publishing-private-npm-packages-using-github-packages-415993cd2da8
+
+`npm publish`

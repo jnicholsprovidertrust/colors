@@ -1,14 +1,13 @@
 {
-  "name": "@providertrust/pt-design-system-colors",
+  "name": "@providertrust/colors",
   "version": "1.0.0",
   "description": "Color variables to be used by PT's front end apps",
-  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/providertrust/pt-design-system-colors.git"
+    "url": "git+https://github.com/providertrust/colors.git"
   },
   "keywords": [
     "providertrust",
@@ -24,9 +23,9 @@
   "author": "Bailin Gao",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/providertrust/pt-design-system-colors/issues"
+    "url": "https://github.com/providertrust/colors/issues"
   },
-  "homepage": "https://github.com/providertrust/pt-design-system-colors#readme",
+  "homepage": "https://github.com/providertrust/colors#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/providertrust"
   }
