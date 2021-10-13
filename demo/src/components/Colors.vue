@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import styles from "../../../src/pds/styles/pds-js-variables.scss";
+import styles from "@providertrust/colors/js-variables.scss"
 
 export default {
   name: "Colors",
