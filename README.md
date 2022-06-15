@@ -112,3 +112,5 @@ Update the `package.json` version, and then create a new release in GitHub. It s
 Follow the setup directions on https://javascript.plainenglish.io/publishing-private-npm-packages-using-github-packages-415993cd2da8 . Compared to [above steps for generating a token](#generate-a-github-personal-access-token), you'll need to give it additional scopes.
 
 Update the `package.json` version, then go to project root, and run `npm publish`
+
+test change
