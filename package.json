@@ -1,6 +1,6 @@
 {
   "name": "@providertrust/colors",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Color variables to be used by PT's front end apps",
   "scripts": {
     "test": "exit 0"
