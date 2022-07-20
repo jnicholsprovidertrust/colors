@@ -33,7 +33,7 @@ SASS variables can be used in your project by importing them into your variables
 file as follows:
 ```
 // styles/variables.scss
-@import '@providertrust/colors/variables.scss';
+@import '@providertrust/colors/_variables.module.scss';
 ```
 
 #### Use in Component Style
@@ -51,7 +51,7 @@ After [importing into vuetify variables](#import-into-vuetify-variables), you co
 Example:
 ```
 // vuetify.js
-import colors from '@providertrust/colors/js-variables.scss'
+import colors from '@providertrust/colors/_js-variables.module.scss'
 
 Vue.use(Vuetify);
 
@@ -89,7 +89,7 @@ data() {
 
 In addition to [this method](#use-in-component-javascript), you can also import the library and use it directly
 ```
-import colors from '@providertrust/colors/js-variables.scss'
+import colors from '@providertrust/colors/_js-variables.module.scss'
 
 <script>
 data() {
